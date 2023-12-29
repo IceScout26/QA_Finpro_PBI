@@ -31,7 +31,7 @@ export function testCreateAPI() {
 
   check(response, {
     "Create API - Status 201": (r) => r.status === 201,
-    "Create API - Response memiliki ID": (r) => r.json().hasOwnProperty("id"),
+    "Create API - Response have ID": (r) => r.json().hasOwnProperty("id"),
   });
 
   sleep(1);
@@ -52,7 +52,7 @@ export function testUpdateAPI() {
 
   check(response, {
     "Update API - Status 200": (r) => r.status === 200,
-    "Update API - Berhasil Diperbarui": (r) => r.json().job === "zion resident",
+    "Update API - Success updated": (r) => r.json().job === "zion resident",
   });
 
   sleep(1);
